@@ -1,0 +1,178 @@
+<html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Java_Jive Premium Coffee</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+}
+
+header h1 {
+  color: #c59d5f;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+  url('https://images.unsplash.com/photo-1509042239860-f550ce710b93') center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 3rem;
+}
+
+.btn {
+  background: #c59d5f;
+  padding: 12px 25px;
+  border-radius: 25px;
+  color: black;
+  text-decoration: none;
+}
+
+section {
+  padding: 60px 40px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.03);
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background: #c59d5f;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <h1>Java_Jive</h1>
+  <nav>
+    <a href="#menu">Menu</a>
+    <a href="#about">Tentang</a>
+    <a href="#contact">Kontak</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h2>Premium Coffee Experience</h2>
+    <p>Kopi & makanan terbaik, langsung ke genggamanmu</p>
+    <a href="#menu" class="btn">Pesan Sekarang</a>
+  </div>
+</section>
+
+<section id="menu">
+  <h2>Menu Favorit</h2>
+
+  <div class="menu-grid">
+
+    <div class="card">
+      <h3>Latte</h3>
+      <p>Rp23.000</p>
+      <button onclick="order('Latte')">Pesan</button>
+    </div>
+
+    <div class="card">
+      <h3>Cappuccino</h3>
+      <p>Rp22.000</p>
+      <button onclick="order('Cappuccino')">Pesan</button>
+    </div>
+
+    <div class="card">
+      <h3>Cold Brew</h3>
+      <p>Rp24.000</p>
+      <button onclick="order('Cold Brew')">Pesan</button>
+    </div>
+
+    <div class="card">
+      <h3>Burger</h3>
+      <p>Rp28.000</p>
+      <button onclick="order('Burger')">Pesan</button>
+    </div>
+
+    <div class="card">
+      <h3>Spaghetti</h3>
+      <p>Rp30.000</p>
+      <button onclick="order('Spaghetti')">Pesan</button>
+    </div>
+
+  </div>
+</section>
+
+<section id="about">
+  <h2>Tentang Kami</h2>
+  <p>Java_Jive hadir bukan sekadar sebagai tempat pemberhentian kopi biasa, melainkan sebuah destinasi kurasi rasa di mana setiap tetes espresso yang kami sajikan merupakan hasil dari dedikasi penuh dalam mengeksplorasi kekayaan biji kopi pilihan dari pelosok Nusantara, dipadukan dengan teknik penyeduhan modern dan suasana yang hangat, guna menghadirkan harmoni sempurna antara aroma yang mendalam dan cita rasa autentik yang mampu membangkitkan inspirasi di setiap sapaan pagi maupun ketenangan di kala senja.".</p>
+</section>
+
+<section id="contact">
+  <h2>Kontak</h2>
+  <p>WhatsApp: 082160106489</p>
+</section>
+
+<footer>
+  © 2026 Java_Jive Premium
+</footer>
+
+<script>
+function order(menu) {
+  let nomor = "6282160106489"; // 
+  let pesan = `Halo Java_Jive, saya ingin pesan ${menu}`;
+  let url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
